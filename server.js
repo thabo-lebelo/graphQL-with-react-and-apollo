@@ -9,6 +9,8 @@ app.use('/graphql', graphqlHTTP({
     graphiql: true
 }))
 
+const PORT = process.env.PORT || 4000
+
 app.listen(4000, () => {
-    console.log('Server is runnning at http://localhost:4000')
+    console.log(`Server is runnning on port ${PORT}`)
 })
