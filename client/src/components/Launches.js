@@ -1,5 +1,6 @@
 import { useQuery, gql } from "@apollo/client";
 import LaunchItem from './LaunchItem'
+import MissionKey from "./MissionKey";
 
 const LAUNCHES_QUERY = gql`
     query LaunchesQuery{
@@ -18,6 +19,7 @@ const Launches = () => {
     return (
         <div className="container">
             <h1 className="display-4 my-3">Launches</h1>
+            <MissionKey />
             {displayLaunches(loading, error, data)}
         </div>
     );
